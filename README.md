@@ -21,7 +21,7 @@ TimeGlide is a floating clock widget application built with Python and Tkinter. 
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/TimeGlide.git
+    git clone https://github.com/moticob/TimeGlide.git
     cd TimeGlide
     ```
 
