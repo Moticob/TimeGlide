@@ -24,7 +24,7 @@ class FloatingClockWidget:
 
         # Enable dragging
         self.root.bind("<ButtonPress-1>", self.start_move)
-        self.root.bind("<B1-Motion>", self.on_move)
+        self.root.bind("<B2-Motion>", self.on_move)
         
     def create_widgets(self):
         # Frame for date and time
