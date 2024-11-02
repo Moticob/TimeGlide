@@ -24,8 +24,11 @@ class FloatingClockWidget:
 
         # Enable dragging
         self.root.bind("<ButtonPress-1>", self.start_move)
-        self.root.bind("<B2-Motion>", self.on_move)
-        
+        self.root.bind("<B1-Motion>", self.on_move)
+
+        # Center the widget on the screen initially
+        self.center_window()
+
     def create_widgets(self):
         # Frame for date and time
         self.time_frame = tk.Frame(self.root, bg=self.bg_color)
@@ -97,7 +100,7 @@ class FloatingClockWidget:
         # Update selected time zone time
         tz_time = datetime.now(self.selected_timezone).strftime("%H:%M:%S")
         self.tz_time_label.config(text=f"{self.selected_timezone}: {tz_time}")
-        
+
         # Refresh every second
         self.root.after(1000, self.update_time)
 
@@ -135,8 +138,19 @@ class FloatingClockWidget:
         self.y = event.y
 
     def on_move(self, event):
-        x = self.root.winfo_pointerx() - self.x
-        y = self.root.winfo_pointery() - self.y
+        # Calculate new position based on mouse movement
+        x = self.root.winfo_x() + event.x - self.x
+        y = self.root.winfo_y() + event.y - self.y
+        self.root.geometry(f"+{x}+{y}")
+
+    def center_window(self):
+        # Center the widget on the screen
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        window_width = self.root.winfo_reqwidth()
+        window_height = self.root.winfo_reqheight()
+        x = (screen_width // 2) - (window_width // 2)
+        y = (screen_height // 2) - (window_height // 2)
         self.root.geometry(f"+{x}+{y}")
 
 # Main application
