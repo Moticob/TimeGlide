@@ -2,6 +2,8 @@
 
 TimeGlide is a floating clock widget application built with Python and Tkinter. It displays the local time, date, and a calendar, and allows users to change the background color, transparency, and time zone.
 
+![Screenshot](Screenshot%20from%202024-11-03%2014-36-52.png)
+
 ## Features
 
 - Displays local time and date
