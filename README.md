@@ -32,62 +32,6 @@ TimeGlide is a floating clock widget application built with Python and Tkinter. 
     pip install -r requirements.txt
     ```
 
-## Usage
-
-Run the application:
-```sh
-python 
-
-Here is the updated 
-
-README.md
-
- with the additional instructions:
-
-```markdown
-# TimeGlide
-
-TimeGlide is a floating clock widget application built with Python and Tkinter. It displays the local time, date, and a calendar, and allows users to change the background color, transparency, and time zone.
-
-## Features
-
-- Displays local time and date
-- Shows the current month's calendar
-- Allows changing the background color
-- Adjustable transparency
-- Selectable time zone
-- Draggable widget
-
-## Requirements
-
-- Python 3.x
-- Tkinter (usually included with Python)
-- `pytz` library
-
-## Installation
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/moticob/TimeGlide.git
-    cd TimeGlide
-    ```
-
-2. Install the required Python packages:
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-## Usage
-
-Run the application:
-```sh
-python 
-
-floating_widget.py
-
-
-```
-
 ## Removing the Application
 
 To remove the application entry for the Floating Clock Widget that you created using the `.desktop` file, you simply need to delete the corresponding `.desktop` file from the `~/.local/share/applications/` directory. You can use the following command in your terminal:
